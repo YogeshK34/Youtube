@@ -7,97 +7,110 @@ import { You } from "./You";
 
 const VIDEOS = [
     {
-        title: "Get rich in 1 Year",
+        id: 1,
+        title: "Interstellar",
         image: "photo2.jpg",
+        thumbnail: "thumbnail.jpeg",
+        author: "Yogesh Khutwad",
+        views: "100K",
+        timeStamp: "2 Months ago",
+    },{
+        id: 2,
+        title: "Interstellar",
+        image: "photo2.jpg",
+        thumbnail: "thumbnail.jpeg",
+        author: "Yogesh Khutwad",
+        views: "100K",
+        timeStamp: "2 Months ago",
+    },{
+        id: 3,
+        title: "Virat Kohli",
+        image: "photo3.jpg",
+        thumbnail: "thumbnail.jpeg",
+        author: "Yogesh Khutwad",
+        views: "100K",
+        timeStamp: "2 Months ago",
+    },{
+        id: 4,
+        title: "Game of Thrones",
+        image: "photo4.jpg",
+        thumbnail: "thumbnail.jpeg",
+        author: "Yogesh Khutwad",
+        views: "100K",
+        timeStamp: "2 Months ago",
+    },{
+        id: 5,
+        title: "Breaking Bad",
+        image: "photo5.jpg",
+        thumbnail: "thumbnail.jpeg",
+        author: "Yogesh Khutwad",
+        views: "100K",
+        timeStamp: "2 Months ago",
+    },{
+        id: 6,
+        title: "Peaky Blinders",
+        image: "photo6.jpg",
+        thumbnail: "thumbnail.jpeg",
+        author: "Yogesh Khutwad",
+        views: "100K",
+        timeStamp: "2 Months ago",
+    },{
+        id: 7,
+        title: "Steve Harrington",
+        image: "photo7.jpg",
+        thumbnail: "thumbnail.jpeg",
+        author: "Yogesh Khutwad",
+        views: "100K",
+        timeStamp: "2 Months ago",
+    },{
+        id: 8,
+        title: "Iron Man",
+        image: "photo8.jpeg",
+        thumbnail: "thumbnail.jpeg",
+        author: "Yogesh Khutwad",
+        views: "100K",
+        timeStamp: "2 Months ago",
+    },{
+        id: 9,
+        title: "Captain America",
+        image: "photo9.jpeg",
         thumbnail: "thumbnail.jpeg",
         author: "Yogesh Khutwad",
         views: "100K",
         timeStamp: "2 Months ago",
     },
     {
-        title: "Get rich in 1 Year",
-        image: "photo2.jpg",
+        id: 10,
+        title: "Virat Kohli",
+        image: "photo10.jpeg",
         thumbnail: "thumbnail.jpeg",
         author: "Yogesh Khutwad",
         views: "100K",
         timeStamp: "2 Months ago",
-    }, {
-        title: "Get rich in 1 Year",
-        image: "photo2.jpg",
+    },{
+        id: 11,
+        title: "Cristiano Ronaldo",
+        image: "photo11.jpeg",
         thumbnail: "thumbnail.jpeg",
         author: "Yogesh Khutwad",
         views: "100K",
         timeStamp: "2 Months ago",
-    }, {
-        title: "Get rich in 1 Year",
-        image: "photo2.jpg",
+    },
+    {
+        id: 12,
+        title: "Lionel Messi",
+        image: "photo12.jpg",
         thumbnail: "thumbnail.jpeg",
         author: "Yogesh Khutwad",
         views: "100K",
         timeStamp: "2 Months ago",
-    }, {
-        title: "Get rich in 1 Year",
-        image: "photo2.jpg",
-        thumbnail: "thumbnail.jpeg",
-        author: "Yogesh Khutwad",
-        views: "100K",
-        timeStamp: "2 Months ago",
-    }, {
-        title: "Get rich in 1 Year",
-        image: "photo2.jpg",
-        thumbnail: "thumbnail.jpeg",
-        author: "Yogesh Khutwad",
-        views: "100K",
-        timeStamp: "2 Months ago",
-    }, {
-        title: "Get rich in 1 Year",
-        image: "photo2.jpg",
-        thumbnail: "thumbnail.jpeg",
-        author: "Yogesh Khutwad",
-        views: "100K",
-        timeStamp: "2 Months ago",
-    }, {
-        title: "Get rich in 1 Year",
-        image: "photo2.jpg",
-        thumbnail: "thumbnail.jpeg",
-        author: "Yogesh Khutwad",
-        views: "100K",
-        timeStamp: "2 Months ago",
-    }, {
-        title: "Get rich in 1 Year",
-        image: "photo2.jpg",
-        thumbnail: "thumbnail.jpeg",
-        author: "Yogesh Khutwad",
-        views: "100K",
-        timeStamp: "2 Months ago",
-    }, {
-        title: "Get rich in 1 Year",
-        image: "photo2.jpg",
-        thumbnail: "thumbnail.jpeg",
-        author: "Yogesh Khutwad",
-        views: "100K",
-        timeStamp: "2 Months ago",
-    }, {
-        title: "Get rich in 1 Year",
-        image: "photo2.jpg",
-        thumbnail: "thumbnail.jpeg",
-        author: "Yogesh Khutwad",
-        views: "100K",
-        timeStamp: "2 Months ago",
-    }, {
-        title: "Get rich in 1 Year",
-        image: "photo2.jpg",
-        thumbnail: "thumbnail.jpeg",
-        author: "Yogesh Khutwad",
-        views: "100K",
-        timeStamp: "2 Months ago",
-    }
+    },
     // Add other video objects here
 ];
 export const VideoGrid = () => {
     const router = useRouter();
 
-    const handleVideoClick = (videoId : number) => {
+    const handleVideoClick = (videoId: number) => {
         router.push(`/videos/${videoId}`);
     };
 
@@ -114,10 +127,10 @@ export const VideoGrid = () => {
 
             {/* Video Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-                {VIDEOS.map((video, index) => (
+                {VIDEOS.map((video) => (
                     <div
-                        key={index}
-                        onClick={() => handleVideoClick(index)} // Pass video ID or index
+                        key={video.id}
+                        onClick={() => handleVideoClick(video.id)}  // Use the video ID
                         className="cursor-pointer"
                     >
                         <VideoCard
