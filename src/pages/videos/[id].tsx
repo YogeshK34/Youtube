@@ -1,9 +1,9 @@
 import { Appbar } from "@/components/Appbar";
 import { VideoCard } from "@/components/CardComponent";
+import { Comments } from "@/components/Comments";
 import { ListBar } from "@/components/ListBar";
 import { VideoGrid } from "@/components/VideoGrid";
 import { useRouter } from "next/router";
-
 export const VideoCardUpdated = (props: any) => {
     return (
         <div className="p-3 cursor-pointer">
@@ -11,11 +11,11 @@ export const VideoCardUpdated = (props: any) => {
                 src={props.videoSrc}  // Use a video source instead of an image
                 className="rounded-xl w-full"
                 controls // This will add play, pause, fullscreen, and timestamp functionality
-                poster={props.thumbnail} // Shows the thumbnail until the video plays
+                poster={props.videoThumbnail} // Shows the video thumbnail until the video plays
             ></video>
             <div className="grid grid-cols-12 pt-2">
                 <div className="col-span-1">
-                    <img className={"rounded-full w-12 h-10"} src={props.thumbnail} />
+                    <img className={"rounded-full w-12 h-10"} src={props.authorThumbnail} /> {/* Author's thumbnail */}
                 </div>
                 <div className="col-span-11 pl-2">
                     <div>{props.title}</div>
@@ -41,9 +41,11 @@ const VideoDetail = () => {
                     <VideoCardUpdated
                         title={"Space Video 4K, Interstellar 2014, Christopher Nolan"}
                         videoSrc={"/video1.mp4"}  // Add the video file path here
-                        thumbnail={"/thumbnail.jpeg"}
+                        videoThumbnail={"/photo2.jpg"}  // Video thumbnail
                         author={"Yogesh Khutwad"}
+                        authorThumbnail={"/thumbnail.jpeg"}  // Author's thumbnail
                     />
+                    <Comments />
                 </div>
                 <div className="col-span-2">
                     <ListBar />
@@ -53,4 +55,6 @@ const VideoDetail = () => {
     );
 };
 export default VideoDetail;
+
+
 
