@@ -81,7 +81,7 @@ const VIDEOS = [
     {
         id: 8,
         title: "Iron Man's Ultimate Programming Suit",
-        videoSrc: "/video8.mp4",
+        videoSrc: "https://res.cloudinary.com/da6ne7pa0/video/upload/v1726340330/video8_iiyszf.mp4",
         videoThumbnail: "/photo8.jpeg",
         author: "Iron Man",
         authorThumbnail: "/thumbnail.jpeg",
