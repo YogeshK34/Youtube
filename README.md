@@ -1,4 +1,4 @@
-# YouTube Clone Frontend
+# Cine Trailer 
 
 This is a YouTube-like frontend application built with [Next.js](https://nextjs.org/). The project is designed to replicate the core functionalities of YouTube, including video playback, dynamic routing, and user-friendly interface components like video thumbnails, sidebars, and search functionality.
 
