@@ -31,12 +31,14 @@ To install and run the project locally, follow these steps:
 
 2. **Installing the Dependencies**:
 
+    ```bash
     npm install
    # or
    yarn install
 
 3. **Run the development Server**:
 
+    ```bash
     npm run dev
     # or
     yarn dev
