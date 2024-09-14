@@ -1,3 +1,5 @@
+import { SingleComment } from "./SingleComment";
+
 export const Comments = () => {
     return (
         <div>
@@ -26,56 +28,98 @@ export const Comments = () => {
                             Post comment
                         </button>
                     </form>
-
                     {/* Example Comment */}
-                    <article className="p-6 text-base bg-white rounded-lg dark:bg-gray-900">
-                        <footer className="flex justify-between items-center mb-2">
-                            <div className="flex items-center">
-                                <p className="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white font-semibold">
-                                    <img
-                                        className="mr-2 w-6 h-6 rounded-full"
-                                        src="https://flowbite.com/docs/images/people/profile-picture-2.jpg"
-                                        alt="Michael Gough"
-                                    />
-                                    Michael Gough
-                                </p>
-                                <p className="text-sm text-gray-600 dark:text-gray-400">
-                                    <time dateTime="2022-02-08" title="February 8th, 2022">
-                                        Feb. 8, 2022
-                                    </time>
-                                </p>
-                            </div>
-                        </footer>
-                        <p className="text-gray-500 dark:text-gray-400">
-                            Very straight-to-point article. Really worth time reading. Thank you!
-                            But tools are just the instruments for the UX designers. The knowledge
-                            of the design tools is as important as the creation of the design
-                            strategy.
-                        </p>
-                        <div className="flex items-center mt-4 space-x-4">
-                            <button
-                                type="button"
-                                className="flex items-center text-sm text-gray-500 hover:underline dark:text-gray-400 font-medium"
-                            >
-                                <svg
-                                    className="mr-1.5 w-3.5 h-3.5"
-                                    aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 20 18"
-                                >
-                                    <path
-                                        stroke="currentColor"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth="2"
-                                        d="M5 5h5M5 8h2m6-3h2m-5 3h6m2-7H2a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h3v5l5-5h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1Z"
-                                    />
-                                </svg>
-                                Reply
-                            </button>
-                        </div>
-                    </article>
+                    {/* Example Comment */}
+                    <SingleComment
+                        name="Alice Johnson"
+                        time="Mar. 12, 2023"
+                        text="Very informative video!"
+                        profileImage="https://flowbite.com/docs/images/people/profile-picture-1.jpg"
+                    /><br></br>
+                    <SingleComment
+                        name="Bob Smith"
+                        time="Jul. 25, 2021"
+                        text="Loved the content!"
+                        profileImage="https://flowbite.com/docs/images/people/profile-picture-2.jpg"
+                    /><br></br>
+                    <SingleComment
+                        name="Catherine Lee"
+                        time="Dec. 1, 2020"
+                        text="This was super helpful!"
+                        profileImage="https://flowbite.com/docs/images/people/profile-picture-3.jpg"
+                    /><br></br>
+                    <SingleComment
+                        name="David Brown"
+                        time="Aug. 19, 2022"
+                        text="Great explanation!"
+                        profileImage="https://flowbite.com/docs/images/people/profile-picture-4.jpg"
+                    /><br></br>
+                    <SingleComment
+                        name="Emily Davis"
+                        time="Oct. 5, 2021"
+                        text="Amazing video!"
+                        profileImage="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+                    /><br></br>
+                    <SingleComment
+                        name="Frank Wilson"
+                        time="Apr. 23, 2020"
+                        text="Thanks for sharing this!"
+                        profileImage="https://flowbite.com/docs/images/people/profile-picture-2.jpg"
+                    /><br></br>
+                    <SingleComment
+                        name="Grace Miller"
+                        time="Sep. 15, 2019"
+                        text="This really helped me."
+                        profileImage="https://flowbite.com/docs/images/people/profile-picture-4.jpg"
+                    /><br></br>
+                    <SingleComment
+                        name="Henry Clark"
+                        time="Nov. 30, 2021"
+                        text="Very clear explanation!"
+                        profileImage="https://flowbite.com/docs/images/people/profile-picture-1.jpg"
+                    /><br></br>
+                    <SingleComment
+                        name="Isla Moore"
+                        time="Jan. 2, 2022"
+                        text="I learned so much!"
+                        profileImage="https://flowbite.com/docs/images/people/profile-picture-3.jpg"
+                    /><br></br>
+                    <SingleComment
+                        name="Jack Taylor"
+                        time="May. 20, 2023"
+                        text="Well done, keep it up!"
+                        profileImage="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+                    /><br></br>
+                    <SingleComment
+                        name="Karen White"
+                        time="Feb. 14, 2020"
+                        text="Great work, thanks!"
+                        profileImage="https://flowbite.com/docs/images/people/profile-picture-3.jpg"
+                    /><br></br>
+                    <SingleComment
+                        name="Liam Harris"
+                        time="Jun. 18, 2019"
+                        text="This was awesome!"
+                        profileImage="https://flowbite.com/docs/images/people/profile-picture-4.jpg"
+                    /><br></br>
+                    <SingleComment
+                        name="Mia Martin"
+                        time="Apr. 27, 2021"
+                        text="I loved the visuals!"
+                        profileImage="https://flowbite.com/docs/images/people/profile-picture-1.jpg"
+                    /><br></br>
+                    <SingleComment
+                        name="Noah Thompson"
+                        time="Oct. 11, 2020"
+                        text="Best video I've watched!"
+                        profileImage="https://flowbite.com/docs/images/people/profile-picture-2.jpg"
+                    /><br></br>
+                    <SingleComment
+                        name="Olivia Scott"
+                        time="Jul. 7, 2022"
+                        text="Thanks for the great content!"
+                        profileImage="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+                    /><br></br>
                 </div>
             </section>
         </div>

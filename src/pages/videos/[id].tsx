@@ -1,6 +1,8 @@
 import { Appbar } from "@/components/Appbar";
 import { Comments } from "@/components/Comments";
-import { ListBar } from "@/components/ListBar";
+import { Listbar } from "@/components/ListBar";
+// import { ListBar } from "@/components/ListBar";
+
 import { VideoCardUpdated } from "@/components/VideoCardUpdated";
 import { useRouter } from "next/router";
 
@@ -147,10 +149,13 @@ const VideoDetail = () => {
                         author={video.author}
                         authorThumbnail={video.authorThumbnail}
                     />
-                    <Comments />
+                    <Comments comment={"jjjkl"} />
+                    {/* <Comments/>
+                    <Comments/> */}
                 </div>
                 <div className="col-span-2">
-                    <ListBar />
+                    {/* <ListBar/> */}
+                    <Listbar/>
                 </div>
             </div>
         </div>
